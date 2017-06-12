@@ -90,6 +90,11 @@
                         <color key="backgroundColor" red="0.71830373999999997" green="0.140656789" blue="0.15245235579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="btnSave" destination="cGQ-Bd-gYS" id="A2m-8v-iOM"/>
+                        <outlet property="lblEmail" destination="pDS-yD-dmm" id="AcN-MD-kYQ"/>
+                        <outlet property="lblName" destination="Usk-66-vFv" id="h7M-fc-Mzj"/>
+                        <outlet property="lblPassword" destination="BfU-b6-G2U" id="pgF-VR-fAs"/>
+                        <outlet property="lblSurname" destination="TWq-GR-2aA" id="gdu-pd-aF0"/>
                         <outlet property="txtEmail" destination="QZC-kH-bHJ" id="KcB-w5-0zf"/>
                         <outlet property="txtName" destination="PPj-OC-h8D" id="xSd-z3-O40"/>
                         <outlet property="txtPassword" destination="3TI-ZB-IMr" id="Qmz-FD-vt9"/>

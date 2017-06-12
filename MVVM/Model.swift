@@ -10,15 +10,16 @@ import Foundation
 
 class Model: NSObject {
     
-    var nick:String!
-    var pass:String!
-    var mail:String!
+    var name:String!
+    var surname:String!
+    var password:String!
+    var email:String!
     
     
-    init(nick:String,pass:String,mail:String) {
-        self.nick = nick
-        self.pass = pass
-        self.mail = mail
+    init(name:String,surname:String,password:String,email:String) {
+        self.name = name
+        self.password = password
+        self.email = email
     }
     
     func saveServer() -> String {

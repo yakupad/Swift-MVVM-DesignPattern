@@ -12,32 +12,37 @@ class ViewModel: NSObject {
   
     private var model:Model!
     
-    init(name:String,pass:String,mail:String) {
+    init(name:String,surname:String,password:String,email:String) {
         
-        self.model = Model(nick: name, pass: pass, mail: mail)
+        self.model = Model(name: name, surname:surname, password: password, email: email)
         
     }
     
-    var nick:String {
+    var name:String {
         get {
-            return model.nick
+            return model.name
         }
     }
     
-    var pass:String {
+    var surname:String {
         get {
-            return model.pass
+            return model.surname
         }
     }
     
-    var mail:String {
+    var password:String {
         get {
-            return model.mail
+            return model.password
         }
     }
     
+    var email:String {
+        get {
+            return model.email
+        }
+    }
     
-    func submit() -> String {
+    func saveData() -> String {
         
         return model.saveServer()
         

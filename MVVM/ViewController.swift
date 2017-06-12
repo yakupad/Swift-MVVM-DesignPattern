@@ -17,24 +17,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     
-    @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var lbl: UILabel!
-    @IBOutlet weak var nickLabel: UILabel!
-    @IBOutlet weak var nickLabel: UILabel!
-    
     @IBOutlet weak var btnSave: UIButton!
+    
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblSurname: UILabel!
+    @IBOutlet weak var lblPassword: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        modelView = ViewModel(name: "Yakup", pass: "******", mail: "yakupad@yandex.com")
+        
         
         
     }
     
     @IBAction func btnSave_Click(_ sender: Any) {
-        let saveServerMessage :String = modelView.submit()
-        print(modelView.submit())
+        
+        modelView = ViewModel(name:txtName.text!, surname:txtSurname.text!, password:txtPassword.text!, email:txtEmail.text!)
+        
+        let saveServerMessage :String = modelView.saveData()
+        print(modelView.saveData())
         
         
       
@@ -42,7 +47,10 @@ class ViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertActionStyle.cancel))
             self.present(alert, animated: true){}
         
-        nickLabel.text = modelView.nick
+        lblName.text = modelView.name
+        lblSurname.text = modelView.surname
+        lblPassword.text = modelView.password
+        lblEmail.text = modelView.email
         
     }
     
