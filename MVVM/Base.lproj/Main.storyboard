@@ -99,7 +99,6 @@
                         <outlet property="txtName" destination="PPj-OC-h8D" id="xSd-z3-O40"/>
                         <outlet property="txtPassword" destination="3TI-ZB-IMr" id="Qmz-FD-vt9"/>
                         <outlet property="txtSurname" destination="Byr-PD-3SO" id="yQd-Hx-rGN"/>
-                        <outlet property="x" destination="QZC-kH-bHJ" id="XdD-rA-aB9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

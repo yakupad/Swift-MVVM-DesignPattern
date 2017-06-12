@@ -20,6 +20,7 @@ class Model: NSObject {
         self.name = name
         self.password = password
         self.email = email
+        self.surname = surname
     }
     
     func saveServer() -> String {
