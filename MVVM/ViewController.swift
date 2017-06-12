@@ -12,7 +12,16 @@ class ViewController: UIViewController {
     
     var modelView: ViewModel!
     
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtSurname: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
+    
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lbl: UILabel!
     @IBOutlet weak var nickLabel: UILabel!
+    @IBOutlet weak var nickLabel: UILabel!
+    
     @IBOutlet weak var btnSave: UIButton!
     
     override func viewDidLoad() {
@@ -26,12 +35,14 @@ class ViewController: UIViewController {
     @IBAction func btnSave_Click(_ sender: Any) {
         let saveServerMessage :String = modelView.submit()
         print(modelView.submit())
-        nickLabel.text = modelView.nick
+        
         
       
             let alert = UIAlertController(title: "Uyarı", message: saveServerMessage , preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertActionStyle.cancel))
             self.present(alert, animated: true){}
+        
+        nickLabel.text = modelView.nick
         
     }
     
